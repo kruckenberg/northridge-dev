@@ -1,6 +1,6 @@
 <main>
 	<h1>{'Northridge Devs'.toUpperCase()}</h1>
-	<img src="/northridge-dev.png" alt="Northridge Devs Banner" />
+	<img src="/northridge-dev.webp" alt="Northridge Devs Banner" />
 </main>
 
 <style>
@@ -13,7 +13,6 @@
 
 	img {
 		width: auto;
-		height: 70%;
 	}
 
 	h1 {
