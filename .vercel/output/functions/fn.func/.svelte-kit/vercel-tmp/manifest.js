@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.ico","favicon.png","northridge-dev.png"]),
-	mimeTypes: {".png":"image/png"},
+	assets: new Set(["favicon.ico","favicon.png","northridge-dev.webp"]),
+	mimeTypes: {".png":"image/png",".webp":"image/webp"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.V8_xybmJ.js","app":"_app/immutable/entry/app.OUF981ET.js","imports":["_app/immutable/entry/start.V8_xybmJ.js","_app/immutable/chunks/scheduler.V7bLW0bx.js","_app/immutable/chunks/singletons.G5zik8g_.js","_app/immutable/entry/app.OUF981ET.js","_app/immutable/chunks/scheduler.V7bLW0bx.js","_app/immutable/chunks/index.exryL9J8.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.IzUO7j5i.js","app":"_app/immutable/entry/app.zOsa1mnd.js","imports":["_app/immutable/entry/start.IzUO7j5i.js","_app/immutable/chunks/scheduler.CJ2Vb8ZA.js","_app/immutable/chunks/singletons.aMoCn3G7.js","_app/immutable/entry/app.zOsa1mnd.js","_app/immutable/chunks/scheduler.CJ2Vb8ZA.js","_app/immutable/chunks/index.8TvxO4YG.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
