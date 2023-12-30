@@ -1,4 +1,4 @@
-<h1>Middle School Python Game Dev</h1>
+<h1>Python Game Dev Course</h1>
 
 <style>
 	h1 {
