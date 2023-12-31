@@ -10,14 +10,15 @@ return {
 	assets: new Set(["favicon.ico","logo.png","northridge-dev.webp"]),
 	mimeTypes: {".png":"image/png",".webp":"image/webp"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.XdouxizV.js","app":"_app/immutable/entry/app.BoNvZ_TZ.js","imports":["_app/immutable/entry/start.XdouxizV.js","_app/immutable/chunks/scheduler.CJ2Vb8ZA.js","_app/immutable/chunks/singletons.IuBU-V-m.js","_app/immutable/entry/app.BoNvZ_TZ.js","_app/immutable/chunks/scheduler.CJ2Vb8ZA.js","_app/immutable/chunks/index.8TvxO4YG.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.Ez9a_Fy6.js","app":"_app/immutable/entry/app.ENTZ9Vkc.js","imports":["_app/immutable/entry/start.Ez9a_Fy6.js","_app/immutable/chunks/scheduler.Hj8WpivC.js","_app/immutable/chunks/singletons.fMbMZ6UI.js","_app/immutable/entry/app.ENTZ9Vkc.js","_app/immutable/chunks/scheduler.Hj8WpivC.js","_app/immutable/chunks/index.M0TSPs4J.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
 			__memo(() => import('../output/server/nodes/2.js')),
 			__memo(() => import('../output/server/nodes/3.js')),
 			__memo(() => import('../output/server/nodes/4.js')),
-			__memo(() => import('../output/server/nodes/5.js'))
+			__memo(() => import('../output/server/nodes/5.js')),
+			__memo(() => import('../output/server/nodes/6.js'))
 		],
 		routes: [
 			{
@@ -46,6 +47,13 @@ return {
 				pattern: /^\/game-dev\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				endpoint: null
+			},
+			{
+				id: "/game-dev/syllabus",
+				pattern: /^\/game-dev\/syllabus\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
 			}
 		],
