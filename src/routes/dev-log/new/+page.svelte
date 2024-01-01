@@ -72,6 +72,7 @@
 					<div>{rating} {grade}</div>
 				</div>
 			</div>
+			<button type="submit">Submit</button>
 		</form>
 	</div>
 </div>
@@ -124,6 +125,17 @@
 	}
 
 	textarea {
+		font-family: 'Quicksand';
+		font-size: 1.25rem;
+		color: rgb(255, 255, 255);
+		background-color: rgb(10, 10, 10, 0.8);
+		padding: 0.75rem;
+		border-radius: 0.4rem;
+		border: 1px solid #000;
+	}
+
+	button {
+		width: 100%;
 		font-family: 'Quicksand';
 		font-size: 1.25rem;
 		color: rgb(255, 255, 255);
