@@ -1,4 +1,8 @@
+<script>
+</script>
+
 <h1>Python Game Dev Course</h1>
+<a href="game-dev/syllabus">Syllabus</a>
 
 <style>
 	h1 {

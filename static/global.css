@@ -1,0 +1,9 @@
+p {
+	font-size: 1.25rem;
+}
+
+a {
+	text-decoration: underline;
+	font-size: 1.25rem;
+	color: #000;
+}
