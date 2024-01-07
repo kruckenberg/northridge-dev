@@ -1,3 +1,7 @@
+body {
+	font-size: 1.25rem;
+}
+
 p {
 	font-size: 1.25rem;
 }
@@ -6,4 +10,9 @@ a {
 	text-decoration: underline;
 	font-size: 1.25rem;
 	color: #000;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
 }
