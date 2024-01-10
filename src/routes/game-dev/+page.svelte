@@ -16,17 +16,7 @@
 | Weeks 17 - 19 | Final Projects |
 | Week 20 | Goodbyes / End-of-semester celebration |`;
 
-	const problemSets = `
-  | Problem Set | Due Date |
-  | ----------- | -------- |
-  | [0 - Scratch Cat](https://github.com/northridge-dev/python-game-dev/blob/main/problem_sets/0-scratch-cat.md) |  Friday, January 12 |
-`;
-
-	const projects = `
-  | Project | Due Date |
-  | ------- | -------- |
-  | [0 - Scratch](https://github.com/northridge-dev/python-game-dev/blob/main/projects/0-scratch.md) | Friday, January 12 |
-  `;
+	export let data;
 </script>
 
 <div class="container">
@@ -39,7 +29,7 @@
 		>all problem sets</a
 	>
 	<div class="box">
-		<SvelteMarkdown source={problemSets} />
+		<SvelteMarkdown source={data.problemSets} />
 	</div>
 
 	<div>
@@ -47,7 +37,7 @@
 	</div>
 	<a href="https://github.com/northridge-dev/python-game-dev/tree/main/projects">all projects</a>
 	<div class="box">
-		<SvelteMarkdown source={projects} />
+		<SvelteMarkdown source={data.projects} />
 	</div>
 	<div>
 		<h2>Tenative Schedule</h2>
