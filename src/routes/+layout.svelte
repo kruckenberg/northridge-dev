@@ -25,7 +25,7 @@
 	async function login() {
 		const { data, error: err } = await supabase.auth.signInWithOAuth({
 			provider: 'github',
-			options: { redirectTo: 'http://localhost:5173/auth/callback' }
+			options: { redirectTo: 'https://northridge.dev/auth/callback' }
 		});
 
 		if (err) {
