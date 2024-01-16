@@ -1,8 +1,5 @@
 <script>
-	import { invalidate } from '$app/navigation';
 	import Protected from '$lib/components/Protected.svelte';
-
-	invalidate('supabase:auth');
 
 	export let data;
 	let { session } = data;
