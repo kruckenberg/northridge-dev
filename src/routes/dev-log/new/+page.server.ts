@@ -1,4 +1,4 @@
-import { fail } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from '@sveltejs/kit';
 
 export const actions: Actions = {
@@ -16,5 +16,7 @@ export const actions: Actions = {
 		if (error) {
 			throw fail(500, { message: 'Something went wrong' });
 		}
+
+		throw redirect(303, '/dev-log');
 	}
 };
