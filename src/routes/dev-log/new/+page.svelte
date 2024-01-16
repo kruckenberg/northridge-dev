@@ -1,10 +1,19 @@
 <script lang="ts">
+	import { invalidate } from '$app/navigation';
+	import Protected from '$lib/components/Protected.svelte';
+
+	invalidate('supabase:auth');
+
+	export let data;
+	let { session } = data;
+	$: ({ session } = data);
+
 	const questions = [
 		{ key: 'learn', text: 'What did you learn today?' },
 		{ key: 'improve', text: 'How did you improve today?' },
 		{ key: 'generous', text: 'How were you generous today?' },
 		{ key: 'resourceful', text: 'How were you persevering or resourceful today?' },
-		{ key: 'craftsmanlike', text: 'How were you craftsmanlike today?' }
+		{ key: 'craftsman', text: 'How were you craftsmanlike today?' }
 	];
 
 	const rndmIdx = Math.floor(Math.random() * questions.length);
@@ -29,53 +38,55 @@
 	$: grade = getLetterGrade(rating);
 </script>
 
-<div class="outer-container">
-	<div class="new-log-container">
-		<p>{new Date().toDateString()}</p>
+<Protected {session}>
+	<div class="outer-container">
+		<div class="new-log-container">
+			<p>{new Date().toDateString()}</p>
 
-		<form method="POST">
-			<div class="form-group">
-				<label for="accomplished">What did you accomplish today?</label>
-				<textarea
-					name="accomplished"
-					id="accomplished"
-					rows="5"
-					cols="80"
-					placeholder="Be specific"
-					required
-				></textarea>
-			</div>
-			<div class="form-group">
-				<label for="answer">
-					<select name="question" id="question" bind:value={selectedQuestion}>
-						{#each questions as question (question.key)}
-							<option id={question.key} value={question.key}>{question.text}</option>
-						{/each}
-					</select>
-				</label>
-				<textarea name="answer" id="answer" rows="5" cols="80" placeholder="Be specific" required
-				></textarea>
-			</div>
-			<div class="form-group">
-				<label for="rating">How would you grade your effort and focus today?</label>
-				<div class="rating">
-					<input
-						type="range"
-						id="rating"
-						name="rating"
-						min="60"
-						max="100"
-						step="1"
-						bind:value={rating}
-						class="range-input"
-					/>
-					<div>{rating} {grade}</div>
+			<form method="POST">
+				<div class="form-group">
+					<label for="accomplished">What did you accomplish today?</label>
+					<textarea
+						name="accomplished"
+						id="accomplished"
+						rows="5"
+						cols="80"
+						placeholder="Be specific"
+						required
+					></textarea>
 				</div>
-			</div>
-			<button type="submit">Submit</button>
-		</form>
+				<div class="form-group">
+					<label for="answer">
+						<select name="question" id="question" bind:value={selectedQuestion}>
+							{#each questions as question (question.key)}
+								<option id={question.key} value={question.key}>{question.text}</option>
+							{/each}
+						</select>
+					</label>
+					<textarea name="answer" id="answer" rows="5" cols="80" placeholder="Be specific" required
+					></textarea>
+				</div>
+				<div class="form-group">
+					<label for="rating">How would you grade your effort and focus today?</label>
+					<div class="rating">
+						<input
+							type="range"
+							id="rating"
+							name="rating"
+							min="60"
+							max="100"
+							step="1"
+							bind:value={rating}
+							class="range-input"
+						/>
+						<div>{rating} {grade}</div>
+					</div>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
 	</div>
-</div>
+</Protected>
 
 <style>
 	.outer-container {

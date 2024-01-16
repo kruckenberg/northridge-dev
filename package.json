@@ -32,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/ssr": "^0.0.10",
+		"@supabase/supabase-js": "^2.39.3",
 		"@vercel/postgres": "^0.5.1",
 		"svelte-markdown": "^0.4.1"
 	}

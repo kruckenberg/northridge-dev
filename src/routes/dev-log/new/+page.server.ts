@@ -1,13 +1,20 @@
+import { fail } from '@sveltejs/kit';
 import type { Actions } from '@sveltejs/kit';
 
 export const actions: Actions = {
-	default: async function ({ request }) {
+	default: async function ({ request, locals }) {
 		const formData = await request.formData();
 		const accomplished = formData.get('accomplished');
 		const question = formData.get('question');
 		const answer = formData.get('answer');
 		const rating = formData.get('rating');
 
-		const devLog = { date: Date.now(), accomplished, question, answer, rating };
+		const { error, data, status, statusText } = await locals.supabase
+			.from('devlog')
+			.insert({ accomplished, question, answer, rating });
+
+		if (error) {
+			throw fail(500, { message: 'Something went wrong' });
+		}
 	}
 };
