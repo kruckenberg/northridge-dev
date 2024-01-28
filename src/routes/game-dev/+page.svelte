@@ -40,10 +40,10 @@
 		<SvelteMarkdown source={data.projects} />
 	</div>
 	<div>
-		<h2>Tenative Schedule</h2>
+		<h2>Class Log</h2>
 	</div>
 	<div class="box">
-		<SvelteMarkdown source={tenativeSchedule} />
+		<SvelteMarkdown source={data.classLog} />
 	</div>
 </div>
 
