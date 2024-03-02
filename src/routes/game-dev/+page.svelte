@@ -9,10 +9,6 @@
 	<a href="game-dev/syllabus">Syllabus</a>
 
 	<div>
-		<h2>Project Library</h2>
-	</div>
-	<a href="https://github.com/northridge-dev/python-game-dev/tree/main/projects">all projects</a>
-	<div class="box">
 		<SvelteMarkdown source={data.projects} />
 	</div>
 	<div>
