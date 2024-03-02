@@ -46,17 +46,17 @@
 	<div class="nav-bar">
 		<p class="logo"><a href="/"><img src="/logo.png" alt="logo" width="50" height="50" /></a></p>
 		<a href="/game-dev">game dev course</a>
-		<a href="/dev-log">dev log</a>
-		<a href="/dev-log/new" class="bordered">+ dev log</a>
+		<!-- <a href="/dev-log">dev log</a> -->
+		<!-- <a href="/dev-log/new" class="bordered">+ dev log</a> -->
 	</div>
-	<div class="nav-bar">
-		{getUsername(session)}
-		{#if session}
-			<button on:click={logout} class="bordered">log out</button>
-		{:else}
-			<button on:click={login} class="bordered">log in</button>
-		{/if}
-	</div>
+	<!-- <div class="nav-bar"> -->
+	<!-- 	{getUsername(session)} -->
+	<!-- 	{#if session} -->
+	<!-- 		<button on:click={logout} class="bordered">log out</button> -->
+	<!-- 	{:else} -->
+	<!-- 		<button on:click={login} class="bordered">log in</button> -->
+	<!-- 	{/if} -->
+	<!-- </div> -->
 </div>
 <hr />
 
