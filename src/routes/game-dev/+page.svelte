@@ -6,7 +6,10 @@
 
 <div class="container">
 	<h1>Python Game Dev Course</h1>
-	<a href="game-dev/syllabus">Syllabus</a>
+	<p>
+		Syllabus: <a href="game-dev/syllabus/ms">middle</a> |
+		<a href="game-dev/syllabus/hs">high</a>
+	</p>
 
 	<div>
 		<SvelteMarkdown source={data.projects} />
